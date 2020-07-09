@@ -2,7 +2,6 @@ backend:
   name: github
   repo: Sl1nd/ARTificial
   branch: master # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow # Allows you to save drafts before publishing them
 media_folder: static/uploads # Media files will be stored in the repo under static/images/uploads
 public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
 
@@ -11,6 +10,7 @@ collections:
   name: "posts"
   folder: "static/content/posts"
   create: true # editors are allowed to create new items
+  slug: "{{slug}}" # Filename template, e.g., title.md
   fields:
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Publish Date", name: "date", widget: "datetime"}
