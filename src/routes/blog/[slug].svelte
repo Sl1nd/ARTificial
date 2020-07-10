@@ -58,7 +58,7 @@
 </svelte:head>
 
 <h1>{post.title}</h1>
-
+<img src={post.thumbnail} alt="bla"/>
 <div class='content'>
 	{@html post.html}
 </div>
