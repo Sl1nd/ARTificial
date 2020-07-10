@@ -8,6 +8,15 @@
 
 <script>
 	export let posts;
+
+	export let test = () => {
+		console.log(posts);
+		console.log('Äclick');
+		posts = [...posts, {
+			slug: 'bla',
+			title: 'ble'
+		}];
+	}
 </script>
 
 <style>
@@ -22,7 +31,7 @@
 </svelte:head>
 
 <h1>Recent posts</h1>
-
+<button on:click={test}>BLBALABLA</button>
 <ul>
 	{#each posts as post}
 		<!-- we're using the non-standard `rel=prefetch` attribute to
